@@ -1,12 +1,24 @@
 import './Header.scss'
 
-const Header = () => {
+interface HeaderProps {
+    euroAmount:number;
+    changeAmount: any;
+}
 
+const Header = ({euroAmount, changeAmount}: HeaderProps) => {
+
+    const changeEuroAmount = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newAmount = parseInt(e.target.value);
+        changeAmount(newAmount);
+    }
 
     return (
         <header className='header'>
             <h1 className='header__title'> Converter </h1>
-            <h2 className='header__subtitle'> 1 euro </h2>
+            <div className="header__amount">
+                <input onChange={changeEuroAmount} type="number" min="1" value={euroAmount} /> <h2> euro </h2>
+            </div>
+            
         </header>
     )
 } 

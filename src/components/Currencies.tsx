@@ -9,10 +9,11 @@ interface CurrenciesPropsObjects {
 }
 
 interface CurrenciesProps {
-    currencies:CurrenciesPropsObjects[]
+    currencies:CurrenciesPropsObjects[];
+    euroAmount:number;
 }
 
-const Currencies = ({currencies} : CurrenciesProps) => {
+const Currencies = ({currencies , euroAmount} : CurrenciesProps) => {
 
     //Déclaration du state
     const [currency , setCurrency] = useState(currencies[0].name)
@@ -40,7 +41,7 @@ const Currencies = ({currencies} : CurrenciesProps) => {
                 ))}
             </ul>
         </div>
-        <Converter currency={currency} rate={rate} />
+        <Converter currency={currency} rate={rate} euroAmount={euroAmount}/>
         </>
     )
 } 

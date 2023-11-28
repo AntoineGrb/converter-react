@@ -16,4 +16,17 @@
         color: #fff;
         font-weight: 300;
     }
+
+    &__amount {
+        color: #fff;
+        font-weight: 300;
+        display: flex;
+        gap: 0.5rem;
+
+        input {
+            width: 100px;
+            border: none;
+            border-radius: 5px;
+        }
+    }
 }
