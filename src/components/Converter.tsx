@@ -1,11 +1,16 @@
 import './Converter.scss'
 
-const Converter = () => {
+interface ConverterProps {
+    currency:string;
+    rate:number
+}
+
+const Converter = ({currency , rate}: ConverterProps) => {
 
     return (
         <div className='converter'>
-            <p> <span className='converter__result'> 1.09 </span></p>
-            <p className="converter__currency"> United States Dollar </p>
+            <p> <span className='converter__result'> {rate.toFixed(2)} </span></p>
+            <p className="converter__currency"> {currency} </p>
         </div>
     )
 

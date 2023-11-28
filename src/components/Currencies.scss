@@ -1,6 +1,6 @@
 .currencies {
     padding: 1rem;
-    max-height: 500px;
+    max-height: 200px;
     overflow-y: scroll;
 
     &__title , .currency {
@@ -9,6 +9,10 @@
         list-style-type: none;
         border-bottom: 1px solid #f1c5b6;
         color: #bb5432;
+    }
+
+    .currency {
+        cursor: pointer;
     }
 
 
