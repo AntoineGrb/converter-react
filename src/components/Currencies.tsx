@@ -21,11 +21,13 @@ const Currencies = ({currencies} : CurrenciesProps) => {
     //Sélection de la currency
     const changeCurrency = (e:any) => {
         const newCurrency = e.target.textContent;
-        const currency = currencies.filter(currency => currency.name === newCurrency);
+        const currency = currencies.find(currency => currency.name === newCurrency);
         
         //Maj le state
-        setCurrency(currency[0].name);
-        setRate(currency[0].rate)
+        if (currency) {
+            setCurrency(currency.name);
+            setRate(currency.rate)
+        }
     }
 
     return (
@@ -33,8 +35,8 @@ const Currencies = ({currencies} : CurrenciesProps) => {
         <div className='currencies'>
             <p className='currencies__title'> Currencies </p>
             <ul className='currencies__list'>
-                {currencies.map((currency , index)  => (
-                    <li onClick={changeCurrency} key={index} className='currency'>{currency.name}</li>
+                {currencies.map((element , index)  => (
+                    <li onClick={changeCurrency} key={index} className='currency'>{element.name}</li>
                 ))}
             </ul>
         </div>

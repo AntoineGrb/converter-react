@@ -1,11 +1,11 @@
 .currencies {
-    padding: 1rem;
+    padding: 1rem 0;
     max-height: 200px;
     overflow-y: scroll;
 
     &__title , .currency {
         font-size: 1.3rem;
-        padding: 0.8rem;
+        padding: 0.8rem 1rem;
         list-style-type: none;
         border-bottom: 1px solid #f1c5b6;
         color: #bb5432;
@@ -13,6 +13,11 @@
 
     .currency {
         cursor: pointer;
+        transition: background-color .2s ease-in-out;
+    }
+
+    .currency:hover {
+        background-color: #f1c5b6;
     }
 
 
