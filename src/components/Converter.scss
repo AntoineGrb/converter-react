@@ -1,0 +1,19 @@
+.converter {
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    &__result {
+        color: #bb5432;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__currency {
+        color: #bb5432;
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+}

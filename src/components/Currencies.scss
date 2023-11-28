@@ -1,0 +1,16 @@
+.currencies {
+    padding: 1rem;
+    max-height: 500px;
+    overflow-y: scroll;
+
+    &__title , .currency {
+        font-size: 1.3rem;
+        padding: 0.8rem;
+        list-style-type: none;
+        border-bottom: 1px solid #f1c5b6;
+        color: #bb5432;
+    }
+
+
+    
+}
