@@ -11,6 +11,10 @@
         color: #bb5432;
     }
 
+    &__title {
+        font-weight: 300;
+    }
+
     .currency {
         cursor: pointer;
         transition: background-color .2s ease-in-out;
